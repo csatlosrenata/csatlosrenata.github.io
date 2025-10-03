@@ -1,6 +1,61 @@
 <!-- _pages/lab1.html -->
 
 <style>
+  
+#sakktabla {
+  border: 4px solid #333;
+  border-collapse: collapse;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#sakktabla td {
+  width: 6vw;
+  height: 6vw;
+  min-width: 40px;
+  min-height: 40px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+
+#sakktabla tr:nth-child(even) td:nth-child(odd),
+#sakktabla tr:nth-child(odd) td:nth-child(even) {
+  background-color: #222;
+}
+
+
+#sakktabla tr:nth-child(even) td:nth-child(even),
+#sakktabla tr:nth-child(odd) td:nth-child(odd) {
+  background-color: #eee;
+}
+
+
+#sakktabla td:hover {
+  background-color: gold;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+
+#sakktabla td:focus {
+  outline: 3px solid purple;
+  background-color: plum;
+}
+
+
+@media (prefers-contrast: more) {
+  #sakktabla td {
+    border: 1px solid black;
+  }
+  #sakktabla tr:nth-child(even) td:nth-child(odd),
+  #sakktabla tr:nth-child(odd) td:nth-child(even) {
+    background-color: black !important;
+  }
+  #sakktabla tr:nth-child(even) td:nth-child(even),
+  #sakktabla tr:nth-child(odd) td:nth-child(odd) {
+    background-color: white !important;
+  }
+}
 </style>
 
 <table id='sakktabla' cellspacing=0>
